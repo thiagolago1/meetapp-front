@@ -41,9 +41,9 @@ export function* signUp({ payload }) {
     yield put(signUpSuccess());
 
     history.push('/login');
-    toast.success("Congratulations! You're registered!");
+    toast.success('Registro efetuado com sucesso!');
   } catch (err) {
-    toast.error('Sorry, something is wrong. Try again later!');
+    toast.error('Falha no cadastro, verifique suas informações');
 
     yield put(signFailure());
   }
