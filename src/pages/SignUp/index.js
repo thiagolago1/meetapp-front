@@ -4,16 +4,16 @@ import { Form, Input } from '@rocketseat/unform';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 
-import { signUpRequest } from '../../store/modules/auth/actions';
-import logo from '../../assets/logo.svg';
+import { signUpRequest } from '~/store/modules/auth/actions';
+import logo from '~/assets/logo.svg';
 
 export default function SignUp() {
   const schema = Yup.object().shape({
-    name: Yup.string().required('O nome é necessário.'),
+    name: Yup.string().required('O nome é obrigatório'),
     email: Yup.string()
       .email('Insira um email válido.')
-      .required('O email é necessário.'),
-    password: Yup.string().required('A senha é necessária.'),
+      .required('O email é obrigatório'),
+    password: Yup.string().required('A senha é obrigatória'),
   });
   const loading = useSelector(state => state.auth.loading);
   const dispatch = useDispatch();

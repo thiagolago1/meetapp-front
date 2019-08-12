@@ -4,7 +4,7 @@ import { parseISO, format } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import { MdChevronRight, MdAddCircleOutline } from 'react-icons/md';
 
-import api from '../../services/api';
+import api from '~/services/api';
 import { Container, Header, Loading, Meetup } from './styles';
 
 export default function Dashboard() {

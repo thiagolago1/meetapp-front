@@ -2,9 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import logo from '../../assets/logo.svg';
+import logo from '~/assets/logo.svg';
 import { Container, Content, Profile, SignOutButton } from './styles';
-import { signOut } from '../../store/modules/auth/actions';
+import { signOut } from '~/store/modules/auth/actions';
 
 export default function Header() {
   const profile = useSelector(state => state.user.profile);

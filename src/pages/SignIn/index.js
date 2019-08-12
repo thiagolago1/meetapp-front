@@ -4,15 +4,15 @@ import { Form, Input } from '@rocketseat/unform';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 
-import { signInRequest } from '../../store/modules/auth/actions';
-import logo from '../../assets/logo.svg';
+import { signInRequest } from '~/store/modules/auth/actions';
+import logo from '~/assets/logo.svg';
 
 export default function SignIn() {
   const schema = Yup.object().shape({
     email: Yup.string()
       .email('Insira um email válido.')
-      .required('O email é necessário.'),
-    password: Yup.string().required('A senha é necessária.'),
+      .required('O email é obrigatório'),
+    password: Yup.string().required('A senha é obrigatória'),
   });
   const loading = useSelector(state => state.auth.loading);
   const dispatch = useDispatch();
